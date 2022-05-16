@@ -1,0 +1,53 @@
+{
+  "basicConfig": {
+    "baseUrl": "http://localhost:8503/api",
+    "beBaseUrl": "http://localhost:8181/api"
+  },
+  "vismanet": {
+    "api": "https://integration.visma.net/API/controller/api/v1",
+    "authUrl": "https://integration.visma.net/API/resources/oauth/authorize",
+    "tokenUrl": "https://integration.visma.net/API/security/api/v2/token",
+    "redirectUri": "http://localhost:8182/Vismanet/redirect",
+    "scope": "financialstasks",
+    "pageSize": 1000
+  },
+  "tenants": [
+    {
+      "user": "mytreat",
+      "password": "snarterdetjul2018",
+      "integration": "xvisma.net",
+      "clientId": "storeshop_as_prod_jerkbmgxx4",
+      "clientSecret": "f0e30b4d-2d55-4328-85de-ca8fcb5b7629",
+      "redirectUri": "https://www.mytreat.no/storeshop/visma-callback"
+    },
+    {
+      "user": "kaffa",
+      "password": "tpwcom62020",
+      "integration": "xvisma.net",
+      "priceClasses": true,
+      "customerId": "CustomerNumber",
+      "clientId": "storeshop_as_prod_jerkbmgxx4",
+      "clientSecret": "f0e30b4d-2d55-4328-85de-ca8fcb5b7629",
+      "redirectUri": "https://b2b.kaffabutikk.no/storeshop/visma-callback"
+    },
+    {
+      "user": "byggfag",
+      "password": "paaskenkommersnart2021",
+      "integration": "visma.net",
+      "priceClasses": true,
+      "orderPlugin": "byggfag",
+      "unitType": "AJ",
+      "clientId": "storeshop_as_prod_jerkbmgxx4",
+      "clientSecret": "f0e30b4d-2d55-4328-85de-ca8fcb5b7629",
+      "redirectUri": "https://byggfag.profilbutikk.no/storeshop/visma-callback"
+    },
+    {
+      "user": "demo",
+      "datasource": "AppDataSource"
+    },
+    {
+      "user": "other",
+      "datasource": "AppDataSource2"
+    }
+  ]
+}
