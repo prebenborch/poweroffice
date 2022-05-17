@@ -11,6 +11,9 @@
     "scope": "financialstasks",
     "pageSize": 1000
   },
+  "powerOffice": {
+    "tokenUrl": "https://api-demo.poweroffice.net/OAuth/Token"
+  },
   "tenants": [
     {
       "user": "mytreat",
@@ -43,11 +46,16 @@
     },
     {
       "user": "demo",
-      "datasource": "AppDataSource"
+      "password": "jsjhdbdb",
+      "datasource": "AppDataSource",
+      "clientId": "5866f9ee-75d3-4c21-8984-2a63711f77b3",
+      "clientSecret": "f300a610-0299-48a9-b55a-4915406e26ab"
     },
     {
       "user": "other",
-      "datasource": "AppDataSource2"
+      "datasource": "AppDataSource2",
+      "clientId": "5866f9ee-75d3-4c21-8984-2a63711f77b3",
+      "clientSecret": "f300a610-0299-48a9-b55a-4915406e26ab"
     }
   ]
 }

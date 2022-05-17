@@ -1,13 +1,49 @@
 import {Request, Response, Router} from 'express';
 import * as dss from '../../data-source';
 import {User} from '../../entity/User';
-import * as config from 'config';
-import {TenantService} from '../../services/tenant.service';
+import {TenantService, TokenService} from '../../services/index.service';
 
 const router: Router = Router({mergeParams: true});
 
 class TokensController {
   async generateToken(req: Request, res: Response) {
+    const tenantService = new TenantService();
+    const tenant = tenantService.getTenantByUser(req.query.siteId as string); // siteId == tenant.user
+
+    try {
+      const tokenService = new TokenService();
+      const token = await tokenService.getTokenOfPowerOffice(
+          req.query.siteId,
+      );
+
+      console.log('... ... ... token');
+      console.log(token);
+
+      await tokenService.saveTokenToDB(
+          tenant,
+          token,
+      );
+
+      // delete the token from db then again save new token
+      /*await tokenService.deleteToken(tenant.user);
+      await tokenService.saveTokenToDB(
+          tenant,
+          token.token,
+          req.query.companyId as string
+      );
+      messageLog(
+          tenant.user,
+          'The token has been created and saved in DB successfully. Token: ' +
+          token.token
+      );*/
+      return res.status(200).json({success: true, token});
+    } catch (e) {
+      console.log('Error!', e.message);
+      return res.status(500).json({success: false, message: e.message});
+    }
+  }
+
+  async generateToken2(req: Request, res: Response) {
     let dataSource;
 
     const tenantService = new TenantService();
