@@ -1,6 +1,5 @@
 import * as config from 'config';
 import axios from 'axios';
-import qs = require('qs');
 
 export class CustomerService {
   public config: any;

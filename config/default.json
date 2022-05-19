@@ -14,6 +14,7 @@
   "powerOffice": {
     "tokenUrl": "https://api-demo.poweroffice.net/OAuth/Token",
     "customerURL": "https://api-demo.poweroffice.net/customer",
+    "productURL": "https://api-demo.poweroffice.net/product",
     "speccific1": "https://api-demo.poweroffice.net/customer/15695073",
     "speccific2": "https://api-demo.poweroffice.net/customer/15699069"
   },

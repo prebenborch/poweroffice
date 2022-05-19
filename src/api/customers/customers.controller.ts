@@ -4,7 +4,7 @@ import {CustomerService} from '../../services/customer.service';
 
 const router: Router = Router({mergeParams: true});
 
-class CustomerController {
+class CustomersController {
     async getCustomers(req: Request, res: Response) {
         try {
             const tokenService = new TokenService();
@@ -47,7 +47,7 @@ class CustomerController {
 
 }
 
-const controller = new CustomerController();
+const controller = new CustomersController();
 
 router.get('/', (req: Request, res: Response, next) => {
     controller.getCustomers(req, res);
@@ -73,4 +73,4 @@ router.post('/', (req: Request, res: Response, next) => {
     });*/
 });
 
-export const customerController: Router = router;
+export const customersController: Router = router;
