@@ -1,12 +1,14 @@
 import * as bodyParser from 'body-parser';
 import {Router, Request, Response} from 'express';
 import {tokensController as TokensController} from './tokens/tokens.controller';
+import { customerController as CustomerController } from './customer/customer.controller';
 
 const router: Router = Router();
 
 router.use(bodyParser.urlencoded({extended: false}));
 router.use(bodyParser.json());
 router.use('/tokens', TokensController);
+router.use('/customer', CustomerController)
 
 router.get('/', (req: Request, res: Response) => {
   res.send('PowerOffice api server is running!');

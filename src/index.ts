@@ -1,6 +1,5 @@
 import * as dss from './data-source';
 import * as express from 'express';
-import * as config from 'config';
 import {ApiController} from './api';
 
 const port = 8503;

@@ -12,7 +12,10 @@
     "pageSize": 1000
   },
   "powerOffice": {
-    "tokenUrl": "https://api-demo.poweroffice.net/OAuth/Token"
+    "tokenUrl": "https://api-demo.poweroffice.net/OAuth/Token",
+    "customerURL": "https://api-demo.poweroffice.net/customer",
+    "speccific1": "https://api-demo.poweroffice.net/customer/15695073",
+    "speccific2": "https://api-demo.poweroffice.net/customer/15699069"
   },
   "tenants": [
     {
